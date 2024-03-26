@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: DialogueStringTable_ro
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: ro
+  m_SharedData: {fileID: 11400000, guid: a71b33d117ee03145b711ea629bd7bad, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 2720897458176
+    m_Localized: Unde este toata lumea?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4894700363776
+    m_Localized: Cine sunt ei?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105321106268160
+    m_Localized: "Intrusa nebun\u0103... \xCEndr\u0103zne\u0219ti s\u0103 te \xEEntorci
+      \xEEntr-o lume cur\u0103\u021Bat\u0103 de furia noastr\u0103?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 108211665395712
+    m_Localized: "Ah, un c\u0103l\u0103tor din stele! \u021Ai-a ratat m\u0103re\u021Bia
+      noii mele lumi. Se cuvine ca cel mai mare dintre noi s\u0103 remodeleze aceast\u0103
+      planet\u0103."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 108816442089472
+    m_Localized: "Ei bine, ce comori ai adus din cosmos? Tot ce cade sub privirea
+      mea \xEEmi apar\u021Bine."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 109440361586688
+    m_Localized: "Cum t\xE2nje\u0219te sufletul meu dup\u0103 pove\u0219ti noi. Vino
+      \u0219i poveste\u0219te-mi c\u0103l\u0103toriile tale, c\u0103l\u0103tor obosit,
+      \u0219i poate \xEE\u021Bi voi \xEEmp\u0103rt\u0103\u0219i secretele acestei
+      lumi noi."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 110024737185792
+    m_Localized: "\rDeci, ai fost printre stele \xEEn timp ce eram bloca\u021Bi aici...
+      distrug\xE2nd lumea ta patetic\u0103. Ai un timp grozav."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 110448579993600
+    m_Localized: "Ah, e\u0219ti un lupt\u0103tor, sau e\u0219ti m\xE2ncare!? Lumea
+      de afar\u0103 trebuie s\u0103 fie at\xE2t de bogat\u0103. Spune-mi, este la
+      fel de delicios ca haosul pe care l-am g\u0103tit aici?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 110932342628352
+    m_Localized: "Ah, un vizitator... Nu am mai avut unul de ceva vreme. Nu c\u0103
+      ar conta. De ce s\u0103 te gr\u0103be\u0219ti \xEEntr-o lume care este deja
+      la cap\u0103t?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126352982302720
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 131761122074624
+    m_Localized: "Destul... este aproape timpul, retrage\u021Bi-v\u0103 la post\u0103rile
+      voastre - m\u0103 voi ocupa de asta."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 132539333238784
+    m_Localized: "Doar o clip\u0103"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2216653691576320
+    m_Localized: "Doar o clip\u0103..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6102770178351104
+    m_Localized: "E periculos s\u0103 mergi singur ia asta..."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

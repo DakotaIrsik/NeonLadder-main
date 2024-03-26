@@ -1,0 +1,132 @@
+name: Build and Release project
+on:
+  push:
+    branches:
+      - main
+jobs:
+    buildForAllSupportedPlatforms:
+        name: Build for ${{ matrix.targetPlatform }}
+        runs-on: self-hosted # Updated from ubuntu-latest to self-hosted
+        strategy:
+          fail-fast: false
+          matrix:
+            targetPlatform:
+              - StandaloneOSX
+              - StandaloneWindows64
+              - StandaloneLinux64
+              - iOS
+              - Android
+              - WebGL
+        steps:
+          - uses: actions/checkout@v4
+            with:
+              fetch-depth: 0
+              lfs: true
+          #- uses: actions/cache@v3
+            #with:
+              #path: Library
+              #key: Library-${{ matrix.targetPlatform }}
+              #restore-keys: Library-
+          - if: matrix.targetPlatform == 'Android'
+            uses: jlumbroso/free-disk-space@v1.3.1
+          - uses: game-ci/unity-builder@v4
+            continue-on-error: true
+            env:
+              UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+              UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+              UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+            with:
+              targetPlatform: ${{ matrix.targetPlatform }}
+              runAsHostUser: true
+          - name: Prepare Directory for Zipping
+            run: |
+              mkdir -p build/
+              ls -alh
+          - name: Change Ownership of Build Directory
+            run: sudo chown -R ender:docker build/
+          - name: Zip Artifacts
+            run: |
+              zip -r build/${{ matrix.targetPlatform }}.zip build/${{ matrix.targetPlatform }} || true
+              ls -alh build/
+          - uses: actions/upload-artifact@v3
+            with:
+              name: Build-${{ matrix.targetPlatform }}
+              path: build/${{ matrix.targetPlatform }}.zip
+          - name: Change Ownership of Build Directory back #I think this needs to happen for the Post Run actions/cache@v3 to succeed GPT?
+            run: sudo chown -R ender:ender build/
+
+    create-release:
+        name: Create Release
+        needs: buildForAllSupportedPlatforms
+        runs-on: ubuntu-latest # Updated from ubuntu-latest to self-hosted
+        steps:
+          - name: Checkout Code
+            uses: actions/checkout@v4
+            with:
+              fetch-depth: 0
+
+          - name: Download all Artifacts
+            uses: actions/download-artifact@v3
+
+          - name: Check for Artifacts
+            id: check_artifacts
+            run: |
+                  if compgen -G "Build-*/*.zip" > /dev/null; then
+                    echo "::set-output name=artifacts_exist::true"
+                  else
+                    echo "::set-output name=artifacts_exist::false"
+                  fi
+          - name: Create and Push Unique Tag
+            if: steps.check_artifacts.outputs.artifacts_exist == 'true'
+            id: create_tag
+            run: |
+               DATE_TAG=$(date +"v%m-%d-%Y")
+               git fetch --tags
+               TAG_COUNT=$(git tag -l "$DATE_TAG*" | wc -l)
+               NEW_TAG="NeonLadder-$DATE_TAG-$((TAG_COUNT+1))"
+               while git tag -l | grep -q "$NEW_TAG"; do
+                TAG_COUNT=$((TAG_COUNT+1))
+                NEW_TAG="$DATE_TAG-$TAG_COUNT"
+               done
+
+               echo "Creating new tag: $NEW_TAG"
+               git config --global user.name 'github-actions'
+               git config --global user.email 'github-actions@github.com'
+               git tag "$NEW_TAG"
+               git push origin "$NEW_TAG"
+               echo "::set-output name=tag::$NEW_TAG"
+
+          - name: Create Release
+            if: steps.check_artifacts.outputs.artifacts_exist == 'true'
+            id: create_release
+            uses: actions/create-release@v1
+            env:
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            with:
+              tag_name: ${{ steps.create_tag.outputs.tag }}
+              release_name: ${{ steps.create_tag.outputs.tag }}
+              draft: false
+              prerelease: false
+              body: Release of Neon Ladder
+              
+          - name: Upload Release Assets
+            if: steps.check_artifacts.outputs.artifacts_exist == 'true'
+            run: |
+                  base_url="${{ steps.create_release.outputs.upload_url }}"
+                  base_url="${base_url%\{*}"  # Remove {?name,label} from the URL
+                  for platform in Android StandaloneWindows64 StandaloneOSX StandaloneLinux64 iOS WebGL; do
+                    artifact_path="./Build-$platform/$platform.zip"
+                    if [ -f "$artifact_path" ]; then
+                      echo "Uploading artifact for $platform..."
+                      final_url="${base_url}?name=$(basename "$artifact_path")&label=$platform"
+                      curl \
+                        -X POST \
+                        -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+                        -H "Content-Type: application/zip" \
+                        --data-binary @"$artifact_path" \
+                        "$final_url"
+                    else
+                      echo "Artifact for $platform not found."
+                    fi
+                  done
+      

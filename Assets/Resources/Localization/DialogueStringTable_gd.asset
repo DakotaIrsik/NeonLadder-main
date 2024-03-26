@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: DialogueStringTable_gd
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: gd
+  m_SharedData: {fileID: 11400000, guid: a71b33d117ee03145b711ea629bd7bad, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 2720897458176
+    m_Localized: "C\xE0ite bheil a h-uile duine?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4894700363776
+    m_Localized: "C\xF2 th 'annta?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105321106268160
+    m_Localized: "Eadar-theangair g\xF2rach ... An toil leat tilleadh gu saoghal
+      a tha air a ghlanadh le ar fearg?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 108211665395712
+    m_Localized: "Ah, neach-siubhail bho na rionnagan! Tha thu air m\xF2rachd an
+      t-saoghail \xF9ir agam a chall. Tha e iomchaidh gu bheil an fheadhainn as motha
+      nar measg ag ath-dhealbhadh a\u2019 phlanaid seo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 108816442089472
+    m_Localized: "Uill, uill, d\xE8 na h-ulaidhean a thug thu bhon chosmos? Buinidh
+      gach n\xEC a tha fo m\u2019 sh\xF9il dhomh."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 109440361586688
+    m_Localized: "Mar a tha m 'anam a' miannachadh airson sgeulachdan \xF9ra. Thig
+      agus innis dhomh mu do thursan, neach-siubhail sg\xECth, agus is d\xF2cha gun
+      roinn mi riut d\xEComhaireachdan an t-saoghail \xF9ir seo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 110024737185792
+    m_Localized: "Mar sin, tha thu air a bhith am measg nan rionnagan fhad \u2018s
+      a bha sinn an s\xE0s an seo ... a\u2019 cur sgudal air do shaoghal foighidneach.
+      Tha deagh \xE0m agad."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 110448579993600
+    m_Localized: "Ah, an e trodaiche a th\u2019 annad, neo an e biadh a th\u2019
+      annad!? Feumaidh an saoghal a-muigh a bhith cho luachmhor. Innis dhomh, a bheil
+      e cho blasta ris a\u2019 chaos a bhruich sinn an seo?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 110932342628352
+    m_Localized: "Ah, neach-tadhail... Cha robh fear agam ann an \xF9ine. Chan e
+      gu bheil e cudromach. Carson a tha cabhag ann an saoghal a tha mar-th\xE0 aig
+      a chr\xECoch?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126352982302720
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 131761122074624
+    m_Localized: "Gu le\xF2r... tha an t-\xE0m ann, till air ais gu na puist agad
+      - l\xE0imhsichidh mi am fear seo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 132539333238784
+    m_Localized: Seo i a' tighinn!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2216653691576320
+    m_Localized: "D\xECreach mionaid..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6102770178351104
+    m_Localized: "Tha e cunnartach a dhol leat fh\xE8in, gabh seo ..."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

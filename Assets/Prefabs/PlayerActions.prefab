@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8595323701724145743
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8595323701724145742}
+  - component: {fileID: 8595323701724145737}
+  m_Layer: 0
+  m_Name: PlayerActions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8595323701724145742
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8595323701724145743}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8595323701724145737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8595323701724145743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951f4bb10fb9e2c42b205d2e25b4a83d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meta: {fileID: 0}
+  bulletPrefab: {fileID: 333493663828317435, guid: 6ad0a9533621ea04baaa901e4861aae4, type: 3}
+  player: {fileID: 0}
+  jumpAudio: {fileID: 8300000, guid: 67975c08d56ceb147bad38572d805aa8, type: 3}
+  PlayerActionsDebugText: {fileID: 0}
+  AnimationDebuggingText: {fileID: 0}
+  InputDebuggingText: {fileID: 0}
+  ControllerNameDebuggingText: {fileID: 0}
+  TouchScreenSupportDebuggingText: {fileID: 0}
+  leftHitbox: {fileID: 0}
+  rightHitbox: {fileID: 0}
+  jumpState: 0
+  jump: 0
+  stopJump: 0
+  grabState: 0
+  stopGrab: 0
+  sprintSpeed: 6
+  sprintDuration: 1
+  sprintState: 0
+  stopSprint: 0
+  dashSpeed: 8
+  dashDuration: 0.6
+  dashState: 0
+  stopDash: 0
+  isDashing: 0
+  knockbackDuration: 1
+  knockbackSpeed: 2
+  knockback: 0
+  knockbackState: 0
+  isAttacking: 0
+  isDashAttacking: 0
+  isClimbing: 0

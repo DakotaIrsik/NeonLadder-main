@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: DialogueStringTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: DialogueStringTable
+  m_TableCollectionNameGuidString: a71b33d117ee03145b711ea629bd7bad
+  m_Entries:
+  - m_Id: 2720897458176
+    m_Key: "protagonist-intro-1\t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4894700363776
+    m_Key: protagonist-intro-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105321106268160
+    m_Key: wrath-intro-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 108211665395712
+    m_Key: pride-intro-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 108816442089472
+    m_Key: greed-intro-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 109440361586688
+    m_Key: lust-intro-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 110024737185792
+    m_Key: envy-intro-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 110448579993600
+    m_Key: gluttony-intro-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 110932342628352
+    m_Key: sloth-intro-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126352982302720
+    m_Key: protagonist-intro-3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 131761122074624
+    m_Key: finalboss-intro-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 132539333238784
+    m_Key: protagonist-intro-4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2216653691576320
+    m_Key: finalboss-intro-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6102770178351104
+    m_Key: merchant-first-sword
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 6477287153944231960
+  references:
+    version: 2
+    RefIds:
+    - rid: 6477287153944231960
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1705443277256

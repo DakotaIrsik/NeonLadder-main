@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: DialogueStringTable_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: a71b33d117ee03145b711ea629bd7bad, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 2720897458176
+    m_Localized: Where is everyone?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4894700363776
+    m_Localized: Who ... are they?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105321106268160
+    m_Localized: Foolish interloper ... You dare return to a world cleansed by our
+      fury?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 108211665395712
+    m_Localized: Ah, a traveler from the stars! You've missed the grandeur of my
+      new world. Afterall, it's only fitting that the greatest among us reshapes
+      this place.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 108816442089472
+    m_Localized: "\rWell, well, what treasures have you brought from the cosmos?
+      Everything that falls under my gaze belongs to me.\r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 109440361586688
+    m_Localized: How my soul yearns for new tales. Come and tell me of your journeys,
+      weary traveler, and perhaps I'll share with you the secrets of this new world.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 110024737185792
+    m_Localized: So, you've been amongst the stars while we were stuck here ... laying
+      waste to your pathetic world. You have great timing.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 110448579993600
+    m_Localized: Ah, are you a fighter, or are you food!? The world outside must
+      be so bountiful. Tell me, is it as delicious as the chaos we've cooked up here?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 110932342628352
+    m_Localized: Ah, a visitor... Haven't had one in a while. Not that it matters.
+      Why rush in a world that's already at its end?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126352982302720
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 131761122074624
+    m_Localized: Enough... it's nearly time, retreat to your posts - I'll handle
+      this one.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 132539333238784
+    m_Localized: Here she comes!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2216653691576320
+    m_Localized: Only an instant...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6102770178351104
+    m_Localized: It's dangerous to go alone, take this...
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
